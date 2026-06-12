@@ -233,3 +233,48 @@ body {
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
     }
 }
+
+/* ==========================================================================
+   SECCIÓN DE LA HISTORIA (Estilos Generales)
+   ========================================================================== */
+.story-container {
+    width: 100%;
+    max-width: 950px;
+    margin-top: 20px;
+}
+
+/* La tarjeta contenedora del texto con la curvatura de tu mockup */
+.story-card {
+    background: rgba(255, 255, 255, 0.02); /* Fondo oscuro ultra sutil */
+    border-radius: 40px 40px 20px 20px; /* Bordes muy redondeados arriba, como en tu dibujo */
+    border: 1px solid rgba(161, 38, 75, 0.2); /* Borde vino fino que amarra con el resto */
+    padding: 40px 35px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px); /* Efecto elegante de vidrio esmerilado */
+}
+
+/* Título de la historia */
+.story-card h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(161, 38, 75, 0.4);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* El texto de la historia (párrafos) */
+.story-card p {
+    font-size: 1rem;
+    line-height: 1.8; /* Espaciado amplio para que no canse la vista */
+    color: #e6cbd7; /* Color malva claro que usamos para los textos */
+    margin-bottom: 20px;
+    text-align: justify; /* Alineación limpia como en tu mockup */
+}
+
+.story-card p:last-child {
+    margin-bottom: 0; /* Quita el margen al último párrafo */
+}
