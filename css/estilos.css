@@ -25,12 +25,14 @@ body {
 }
 
 /* ==========================================================================
-   BARRA LATERAL - Degradado Pasional y Elegante
+   BARRA LATERAL - DISEÑO PARA PC (Fijo a la izquierda)
    ========================================================================== */
 .sidebar {
     width: 320px;
-    height: 100%;
-    /* Degradado sutil: Rojo Sangre/Vino Oscuro a Morado Medianoche */
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    position: fixed; /* Se queda completamente fija en su lugar al hacer scroll */
+    left: 0;
+    top: 0;
     background: linear-gradient(180deg, #5c1329, #230c1b); 
     display: flex;
     flex-direction: column;
@@ -116,26 +118,26 @@ body {
 }
 
 /* ==========================================================================
-   CONTENIDO PRINCIPAL - Espacio de Exhibición Cinematográfica
+   CONTENIDO PRINCIPAL - DISEÑO PARA PC (Scrollable a la derecha)
    ========================================================================== */
 .main-content {
     flex: 1;
-    height: 100%;
-    background-color: #0f090d; /* Un tono aún más oscuro para el área del video */
+    margin-left: 320px; /* Empuja el contenido para que no lo tape la barra fija de PC */
+    background-color: #0f090d; 
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px;
     gap: 35px;
-    overflow-y: auto;
+    height: 100vh;
+    overflow-y: auto; /* Permite que el lado derecho haga scroll de forma independiente */
 }
 
 /* Banner de arriba (Donde irá la portada/título) */
 .top-banner {
     width: 100%;
     max-width: 950px;
-    height: 90px;
-    /* Fondo oscuro semi-transparente con un toque carmín sutil en el borde */
+    min-height: 90px; /* Cambiado a min-height para mejor estabilidad */
     background: rgba(255, 255, 255, 0.02);
     border-radius: 16px;
     border: 1px solid rgba(161, 38, 75, 0.3); 
@@ -147,113 +149,32 @@ body {
     width: 100%;
     max-width: 950px;
     aspect-ratio: 16 / 9;
-    /* Fondo oscuro texturizado visualmente por el borde */
     background: rgba(255, 255, 255, 0.01);
     border-radius: 20px;
-    /* Borde carmesí/vino que amarra con la temática de la canción */
     border: 1px solid rgba(161, 38, 75, 0.4); 
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 
-                0 0 30px rgba(161, 38, 75, 0.05); /* Un resplandor de fondo MUY sutil */
+                0 0 30px rgba(161, 38, 75, 0.05);
 }
 
 /* ==========================================================================
-   ADAPTACIÓN PARA CELULARES (Pantallas menores a 768px de ancho)
-   ========================================================================== */
-@media (max-width: 768px) {
-    
-    /* Cambiamos la distribución de horizontal a vertical */
-    .interface-container {
-        flex-direction: column;
-        height: auto;
-        overflow-y: auto; /* Permite hacer scroll hacia abajo en el celular */
-        background-color: #0f090d;
-    }
-
-    /* 1. LA BARRA LATERAL SE ADAPTA AL TECHO DEL CELULAR */
-    .sidebar {
-        width: 100%;
-        height: auto;
-        padding: 30px 20px 20px 20px;
-        background: linear-gradient(180deg, #5c1329, #140d12); /* Transición suave hacia el fondo del video */
-        border-right: none;
-        border-bottom: 1px solid rgba(161, 38, 75, 0.2);
-        gap: 25px;
-    }
-
-    /* Los botones ahora se acomodan mejor en el espacio del cel */
-    .menu-buttons {
-        margin-top: 10px;
-        gap: 12px;
-    }
-
-    .btn {
-        padding: 12px 15px;
-        font-size: 0.75rem; /* Un poco más compacto para que no sature la pantalla */
-    }
-
-    /* LAS REDES SOCIALES SE VUELVEN HORIZONTALES */
-    .social-links {
-        flex-direction: row; /* Se ponen uno al lado del otro */
-        justify-content: center; /* Se centran en la pantalla */
-        flex-wrap: wrap; /* Si no caben, bajan ordenadamente */
-        gap: 15px;
-        margin: 15px 0;
-    }
-
-    /* Ocultamos el texto del usuario (@Marianalc_music) en celular si se ve muy lleno, 
-       o lo dejamos compacto para que solo resalte el logo brillante */
-    .social-item {
-        font-size: 0.85rem;
-    }
-
-    .sidebar-footer {
-        text-align: center;
-        padding-top: 15px;
-    }
-
-    /* ==========================================================================
-       2. EL CONTENIDO PRINCIPAL SE ADAPTA ABAJO
-       ========================================================================== */
-    .main-content {
-        width: 100%;
-        padding: 20px; /* Menos margen para aprovechar las pantallas pequeñas */
-        gap: 25px;
-    }
-
-    /* El banner ocupa el ancho disponible del celular */
-    .top-banner {
-        height: 70px; /* Más bajito en celular para que no robe pantalla */
-        border-radius: 12px;
-    }
-
-    /* El visor del video se adapta al ancho del teléfono manteniendo la proporción 16:9 */
-    .media-viewer {
-        width: 100%;
-        border-radius: 14px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
-    }
-}
-
-/* ==========================================================================
-   SECCIÓN DE LA HISTORIA (Estilos Generales)
+   SECCIÓN DE LA HISTORIA (Estilos Generales para PC)
    ========================================================================== */
 .story-container {
     width: 100%;
     max-width: 950px;
     margin-top: 20px;
+    margin-bottom: 40px; /* Margen para que no quede pegado al piso en PC */
 }
 
-/* La tarjeta contenedora del texto con la curvatura de tu mockup */
 .story-card {
-    background: rgba(255, 255, 255, 0.02); /* Fondo oscuro ultra sutil */
-    border-radius: 40px 40px 20px 20px; /* Bordes muy redondeados arriba, como en tu dibujo */
-    border: 1px solid rgba(161, 38, 75, 0.2); /* Borde vino fino que amarra con el resto */
+    background: rgba(255, 255, 255, 0.02); 
+    border-radius: 40px 40px 20px 20px; 
+    border: 1px solid rgba(161, 38, 75, 0.2); 
     padding: 40px 35px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px); /* Efecto elegante de vidrio esmerilado */
+    backdrop-filter: blur(10px); 
 }
 
-/* Título de la historia */
 .story-card h2 {
     font-size: 1.8rem;
     color: #ffffff;
@@ -266,15 +187,97 @@ body {
     display: inline-block;
 }
 
-/* El texto de la historia (párrafos) */
 .story-card p {
     font-size: 1rem;
-    line-height: 1.8; /* Espaciado amplio para que no canse la vista */
-    color: #e6cbd7; /* Color malva claro que usamos para los textos */
+    line-height: 1.8; 
+    color: #e6cbd7; 
     margin-bottom: 20px;
-    text-align: justify; /* Alineación limpia como en tu mockup */
+    text-align: justify; 
 }
 
 .story-card p:last-child {
-    margin-bottom: 0; /* Quita el margen al último párrafo */
+    margin-bottom: 0; 
 }
+
+/* ==========================================================================
+   ADAPTACIÓN EXCLUSIVA PARA CELULARES (¡Llaves Corregidas!)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .interface-container {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .sidebar {
+        position: relative; /* Rompe el 'fixed' en celulares */
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        padding: 30px 20px 20px 20px;
+        background: linear-gradient(180deg, #5c1329, #140d12);
+        border-right: none;
+        border-bottom: 1px solid rgba(161, 38, 75, 0.2);
+        gap: 25px;
+    }
+
+    .main-content {
+        margin-left: 0; /* Quita el espacio izquierdo en teléfonos */
+        padding: 20px;
+        height: auto;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .menu-buttons {
+        margin-top: 10px;
+        gap: 12px;
+    }
+
+    .btn {
+        padding: 12px 15px;
+        font-size: 0.75rem; 
+    }
+
+    .social-links {
+        flex-direction: row; 
+        justify-content: center; 
+        flex-wrap: wrap; 
+        gap: 15px;
+        margin: 15px 0;
+    }
+
+    .social-item {
+        font-size: 0.85rem;
+    }
+
+    .sidebar-footer {
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .top-banner {
+        height: 70px; 
+        border-radius: 12px;
+    }
+
+    .media-viewer {
+        width: 100%;
+        border-radius: 14px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    }
+
+    .story-card {
+        padding: 30px 20px; 
+        border-radius: 30px 30px 15px 15px; 
+    }
+
+    .story-card h2 {
+        font-size: 1.4rem; 
+    }
+
+    .story-card p {
+        font-size: 0.95rem; 
+        line-height: 1.7;
+    }
+} /* <--- AQUÍ SE CIERRA LA MEDIA QUERY CORRECTAMENTE Y PROTEGE TODO LO ANTERIOR */
