@@ -1,0 +1,235 @@
+html {
+    scroll-behavior: smooth; /* Hace que la pantalla ruede suavemente al presionar un botón */
+}
+
+/* ==========================================================================
+   RESETEO Y FUENTES (Estilo Cinematográfico)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #140d12; /* Fondo vino/berenjena ultra oscuro (Atmósfera de drama) */
+    color: #f5f0f3;
+}
+
+.interface-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   BARRA LATERAL - Degradado Pasional y Elegante
+   ========================================================================== */
+.sidebar {
+    width: 320px;
+    height: 100%;
+    /* Degradado sutil: Rojo Sangre/Vino Oscuro a Morado Medianoche */
+    background: linear-gradient(180deg, #5c1329, #230c1b); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 45px 30px;
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Botones del Menú (Estilo "Glassmorphism" pulido) */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.btn {
+    background: rgba(255, 255, 255, 0.04); 
+    padding: 16px 22px;
+    border-radius: 50px; /* Óvalos perfectos de tu boceto */
+    text-align: center;
+    color: #e6cbd7;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Hover: El botón se ilumina con elegancia sin encandilar */
+.btn:hover {
+    background: #ffffff;
+    color: #5c1329; /* Texto cambia al color vino */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+/* Redes Sociales con tu efecto de iluminación favorito */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: auto;
+    margin-bottom: 40px;
+}
+
+.social-item {
+    color: rgba(230, 203, 215, 0.6);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.social-item:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+    /* Brillo de neón suave, más sofisticado */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
+}
+
+.icon {
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    font-size: 0.75rem;
+    text-align: left;
+    line-height: 1.6;
+    color: rgba(230, 203, 215, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   CONTENIDO PRINCIPAL - Espacio de Exhibición Cinematográfica
+   ========================================================================== */
+.main-content {
+    flex: 1;
+    height: 100%;
+    background-color: #0f090d; /* Un tono aún más oscuro para el área del video */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    gap: 35px;
+    overflow-y: auto;
+}
+
+/* Banner de arriba (Donde irá la portada/título) */
+.top-banner {
+    width: 100%;
+    max-width: 950px;
+    height: 90px;
+    /* Fondo oscuro semi-transparente con un toque carmín sutil en el borde */
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    border: 1px solid rgba(161, 38, 75, 0.3); 
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
+}
+
+/* El visor principal (Donde irá la dramatización/novela) */
+.media-viewer {
+    width: 100%;
+    max-width: 950px;
+    aspect-ratio: 16 / 9;
+    /* Fondo oscuro texturizado visualmente por el borde */
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 20px;
+    /* Borde carmesí/vino que amarra con la temática de la canción */
+    border: 1px solid rgba(161, 38, 75, 0.4); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 
+                0 0 30px rgba(161, 38, 75, 0.05); /* Un resplandor de fondo MUY sutil */
+}
+
+/* ==========================================================================
+   ADAPTACIÓN PARA CELULARES (Pantallas menores a 768px de ancho)
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* Cambiamos la distribución de horizontal a vertical */
+    .interface-container {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto; /* Permite hacer scroll hacia abajo en el celular */
+        background-color: #0f090d;
+    }
+
+    /* 1. LA BARRA LATERAL SE ADAPTA AL TECHO DEL CELULAR */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 30px 20px 20px 20px;
+        background: linear-gradient(180deg, #5c1329, #140d12); /* Transición suave hacia el fondo del video */
+        border-right: none;
+        border-bottom: 1px solid rgba(161, 38, 75, 0.2);
+        gap: 25px;
+    }
+
+    /* Los botones ahora se acomodan mejor en el espacio del cel */
+    .menu-buttons {
+        margin-top: 10px;
+        gap: 12px;
+    }
+
+    .btn {
+        padding: 12px 15px;
+        font-size: 0.75rem; /* Un poco más compacto para que no sature la pantalla */
+    }
+
+    /* LAS REDES SOCIALES SE VUELVEN HORIZONTALES */
+    .social-links {
+        flex-direction: row; /* Se ponen uno al lado del otro */
+        justify-content: center; /* Se centran en la pantalla */
+        flex-wrap: wrap; /* Si no caben, bajan ordenadamente */
+        gap: 15px;
+        margin: 15px 0;
+    }
+
+    /* Ocultamos el texto del usuario (@Marianalc_music) en celular si se ve muy lleno, 
+       o lo dejamos compacto para que solo resalte el logo brillante */
+    .social-item {
+        font-size: 0.85rem;
+    }
+
+    .sidebar-footer {
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    /* ==========================================================================
+       2. EL CONTENIDO PRINCIPAL SE ADAPTA ABAJO
+       ========================================================================== */
+    .main-content {
+        width: 100%;
+        padding: 20px; /* Menos margen para aprovechar las pantallas pequeñas */
+        gap: 25px;
+    }
+
+    /* El banner ocupa el ancho disponible del celular */
+    .top-banner {
+        height: 70px; /* Más bajito en celular para que no robe pantalla */
+        border-radius: 12px;
+    }
+
+    /* El visor del video se adapta al ancho del teléfono manteniendo la proporción 16:9 */
+    .media-viewer {
+        width: 100%;
+        border-radius: 14px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    }
+}
