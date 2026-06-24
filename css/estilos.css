@@ -5,7 +5,11 @@ html {
 /* ==========================================================================
    RESETEO Y FUENTES (Estilo Cinematográfico)
    ========================================================================== */
-* {
+.footer-movil {
+    display: none; /* Invisible en PC */
+}
+
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -210,13 +214,29 @@ body {
 }
 
 /* ==========================================================================
-   ADAPTACIÓN EXCLUSIVA PARA CELULARES (¡Llaves Corregidas!)
+   ADAPTACIÓN EXCLUSIVA PARA CELULARES
    ========================================================================== */
 @media (max-width: 768px) {
     .interface-container {
         flex-direction: column;
         height: auto;
         overflow-y: auto;
+    }
+
+    .sidebar-footer {
+        display: none; /* Apaga el agradecimiento del inicio en celular */
+    }
+
+    .footer-movil {
+        display: block; /* Enciende el agradecimiento al final en celular */
+        text-align: center;
+        font-size: 0.75rem;
+        line-height: 1.6;
+        color: rgba(230, 203, 215, 0.4);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 20px;
+        margin-top: 20px;
+        width: 100%;
     }
 
     .sidebar {
@@ -259,11 +279,6 @@ body {
 
     .social-item {
         font-size: 0.85rem;
-    }
-
-    .sidebar-footer {
-        text-align: center;
-        padding-top: 15px;
     }
 
     .top-banner {
