@@ -133,15 +133,25 @@ body {
     overflow-y: auto; /* Permite que el lado derecho haga scroll de forma independiente */
 }
 
-/* Banner de arriba (Donde irá la portada/título) */
+/* Banner de arriba (Configurado para la portada oficial) */
 .top-banner {
     width: 100%;
     max-width: 950px;
-    min-height: 90px; /* Cambiado a min-height para mejor estabilidad */
-    background: rgba(255, 255, 255, 0.02);
+    
+    /* CONTROL DE PROPORCIÓN MÁGICA */
+    aspect-ratio: 21 / 7; /* Ajusta este número (ej. 16/5 o 21/7) según qué tan alargada dejes la foto */
+    
+    /* ENLACE A TU NUEVA PORTADA */
+    background-image: url('../images/BANNER.png'); 
+    
+    /* AJUSTES DE RECTIFICACIÓN */
+    background-size: contain;     /* Obliga a la imagen a mostrarse COMPLETA dentro de la caja */
+    background-position: center;   /* Centra perfectamente el título "CONTRASTE" */
+    background-repeat: no-repeat;  /* Evita que se duplique */
+    
     border-radius: 16px;
     border: 1px solid rgba(161, 38, 75, 0.3); 
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* El visor principal (Donde irá la dramatización/novela) */
