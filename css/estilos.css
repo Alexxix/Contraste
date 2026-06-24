@@ -142,15 +142,15 @@ body {
     aspect-ratio: 21 / 7; /* Ajusta este número (ej. 16/5 o 21/7) según qué tan alargada dejes la foto */
     
     /* ENLACE A TU NUEVA PORTADA */
-    background-image: url('../images/BANNER.png'); 
+    background-image: url('../images/BANNER2.png'); 
     
     /* AJUSTES DE RECTIFICACIÓN */
-    background-size: contain;     /* Obliga a la imagen a mostrarse COMPLETA dentro de la caja */
+    background-size: 100% 100%;     /* Obliga a la imagen a mostrarse COMPLETA dentro de la caja */
     background-position: center;   /* Centra perfectamente el título "CONTRASTE" */
     background-repeat: no-repeat;  /* Evita que se duplique */
     
     border-radius: 16px;
-    border: 1px solid rgba(161, 38, 75, 0.3); 
+    border: 1px solid rgba(161, 38, 75, 0.5); 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
@@ -267,8 +267,12 @@ body {
     }
 
     .top-banner {
-        height: 70px; 
+        width: 100%;
+        height: auto; /* Dejamos que el alto lo defina la proporción de la imagen */
+        aspect-ratio: 16 / 5; /* Forzamos la proporción horizontal en pantallas pequeñas */
+        background-size: 100% 100%; /* Mantiene la imagen 100% visible de borde a borde */
         border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     }
 
     .media-viewer {
