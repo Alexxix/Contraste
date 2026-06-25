@@ -261,12 +261,11 @@ body {
     }
 
     .main-content {
-        margin-left: 0; 
+        margin-left: 0; /* Quita el espacio izquierdo en teléfonos */
         padding: 20px;
         height: auto;
         width: 100%;
         gap: 25px;
-        overflow: visible; /* Requerido para que el sticky de sus hijos funcione bien en mobile */
     }
 
     .menu-buttons {
@@ -293,19 +292,11 @@ body {
 
 .top-banner {
         width: 100%;
-        height: auto; 
-        aspect-ratio: 16 / 5; 
-        background-size: 100% 100%; 
+        height: auto; /* Dejamos que el alto lo defina la proporción de la imagen */
+        aspect-ratio: 16 / 5; /* Forzamos la proporción horizontal en pantallas pequeñas */
+        background-size: 100% 100%; /* Mantiene la imagen 100% visible de borde a borde */
         border-radius: 12px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-
-        /* ==========================================
-           PROPIEDADES PARA EL BANNER FIJO (STICKY)
-           ========================================== */
-        position: sticky;      /* Hace que el banner se quede fijo al llegar al tope */
-        top: 0;                /* Se ancla exactamente a 0 píxeles del borde superior */
-        z-index: 100;          /* Capa alta para que todo lo demás pase por debajo */
-        background-color: #0f090d; /* Evita que se transluzca el texto al hacer scroll */
     }
 
     .media-viewer {
