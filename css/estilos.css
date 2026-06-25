@@ -390,4 +390,24 @@ body {
         font-size: 0.95rem; 
         line-height: 1.7;
     }
+
+    /* Ajustes de Más Música dentro del búnker móvil */
+    .music-card {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .music-image {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+    }
+
+    .music-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .music-info p {
+        font-size: 0.8rem;
+    }
 } /* <--- AQUÍ SE CIERRA LA MEDIA QUERY CORRECTAMENTE Y PROTEGE TODO LO ANTERIOR */
