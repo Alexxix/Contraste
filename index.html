@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contraste</title>
+    <link rel="icon" type="image/png" href="images/nota-musical.png">
     
     <!-- ENLACE A FONT AWESOME (Para los iconos oficiales de redes) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -141,5 +142,33 @@
         y fueron parte de este equipo de trabajo
         para la poduccion, distribución y elaboración de contraste</p>
 </main>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    
+    <script>
+        window.onload = function() {
+            // Usamos las coordenadas exactas de dibujo (SVG) de una nota simple y una doble.
+            // Esto desbloquea el color, permitiendo que la librería las pinte como queramos.
+            var notaSimple = confetti.shapeFromPath({
+                path: 'M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z'
+            });
+            var notaDoble = confetti.shapeFromPath({
+                path: 'M22 3H9v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h10v6.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V3z'
+            });
+
+            var coloresDivertidos = ['#FF3366', '#33CCFF', '#FF9933', '#66FF66', '#CC33FF', '#FFFF33'];
+
+            confetti({
+                particleCount: 120,         
+                spread: 120,               
+                origin: { y: 0.5 },        
+                shapes: [notaSimple, notaDoble], // Le pasamos los trazos en lugar del texto
+                colors: coloresDivertidos,       // Ahora sí los pintará con estos colores
+                scalar: 2,                       // Tamaño perfecto para que se note la forma
+                ticks: 100                 
+            });
+        };
+    </script>
+
 </body>
 </html>

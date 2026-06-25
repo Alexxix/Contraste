@@ -133,6 +133,11 @@ body {
 /* ==========================================================================
    SECCIÓN MÁS MÚSICA (Estilos para PC)
    ========================================================================== */
+
+#musica {
+    scroll-margin-top: 30vh; /* Frena el scroll al 30% de la pantalla para no crear el vacío abajo */
+}
+
 .music-container {
     width: 100%;
     max-width: 950px;
