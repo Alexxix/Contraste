@@ -1,12 +1,10 @@
 html {
-    scroll-behavior: smooth; /* Hace que la pantalla ruede suavemente al presionar un botón */
+    scroll-behavior: smooth; 
 }
 
-/* ==========================================================================
-   RESETEO Y FUENTES (Estilo Cinematográfico)
-   ========================================================================== */
+
 .footer-movil {
-    display: none; /* Invisible en PC */
+    display: none; 
 }
 
    * {
@@ -17,17 +15,17 @@ html {
 }
 
 body {
-    background-color: #140d12; /* Fondo vino/berenjena ultra oscuro (Atmósfera de drama) */
+    background-color: #140d12; 
     color: #f5f0f3;
 }
 
-/* Asegura que el reproductor o video llene la caja de forma perfecta */
+
 .media-viewer iframe, 
 .media-viewer video {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 18px; /* Para que herede la curvatura de la caja */
+    border-radius: 18px; 
 }
 
 .interface-container {
@@ -37,13 +35,11 @@ body {
     overflow: hidden;
 }
 
-/* ==========================================================================
-   BARRA LATERAL - DISEÑO PARA PC (Fijo a la izquierda)
-   ========================================================================== */
+
 .sidebar {
     width: 320px;
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-    position: fixed; /* Se queda completamente fija en su lugar al hacer scroll */
+    height: 100vh; 
+    position: fixed; 
     left: 0;
     top: 0;
     background: linear-gradient(180deg, #5c1329, #230c1b); 
@@ -56,7 +52,7 @@ body {
     border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Botones del Menú (Estilo "Glassmorphism" pulido) */
+
 .menu-buttons {
     display: flex;
     flex-direction: column;
@@ -67,7 +63,7 @@ body {
 .btn {
     background: rgba(255, 255, 255, 0.04); 
     padding: 16px 22px;
-    border-radius: 50px; /* Óvalos perfectos de tu boceto */
+    border-radius: 50px; 
     text-align: center;
     color: #e6cbd7;
     text-decoration: none;
@@ -79,15 +75,14 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Hover: El botón se ilumina con elegancia sin encandilar */
+
 .btn:hover {
     background: #ffffff;
-    color: #5c1329; /* Texto cambia al color vino */
+    color: #5c1329; 
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
 }
 
-/* Redes Sociales con tu efecto de iluminación favorito */
 .social-links {
     display: flex;
     flex-direction: column;
@@ -130,12 +125,10 @@ body {
     padding-top: 20px;
 }
 
-/* ==========================================================================
-   SECCIÓN MÁS MÚSICA (Estilos para PC)
-   ========================================================================== */
+
 
 #musica {
-    scroll-margin-top: 30vh; /* Frena el scroll al 30% de la pantalla para no crear el vacío abajo */
+    scroll-margin-top: 30vh; 
 }
 
 .music-container {
@@ -155,12 +148,12 @@ body {
     border: 1px solid rgba(161, 38, 75, 0.2);
     border-radius: 20px;
     padding: 20px 30px;
-    text-decoration: none; /* Quita el subrayado azul de los enlaces */
+    text-decoration: none; 
     gap: 30px;
     transition: all 0.4s ease;
 }
 
-/* Efecto hover elegante: la tarjeta se ilumina y flota un poco */
+
 .music-card:hover {
     background: rgba(161, 38, 75, 0.08);
     border-color: rgba(161, 38, 75, 0.5);
@@ -171,7 +164,7 @@ body {
 .music-image {
     width: 100px;
     height: 100px;
-    min-width: 100px; /* Evita que la imagen se deforme o achique */
+    min-width: 100px; 
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -180,7 +173,7 @@ body {
 .music-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Hace que la foto llene el cuadrado perfectamente */
+    object-fit: cover; 
 }
 
 .music-info h3 {
@@ -201,18 +194,16 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Al pasar el mouse, el llamado a acción se ilumina en rojo/vino */
+
 .music-card:hover .music-info p {
     color: #ff3366;
     opacity: 1;
 }
 
-/* ==========================================================================
-   CONTENIDO PRINCIPAL - DISEÑO PARA PC (Scrollable a la derecha)
-   ========================================================================== */
+
 .main-content {
     flex: 1;
-    margin-left: 320px; /* Empuja el contenido para que no lo tape la barra fija de PC */
+    margin-left: 320px; 
     background-color: #0f090d; 
     display: flex;
     flex-direction: column;
@@ -220,31 +211,31 @@ body {
     padding: 50px;
     gap: 35px;
     height: 100vh;
-    overflow-y: auto; /* Permite que el lado derecho haga scroll de forma independiente */
+    overflow-y: auto; 
 }
 
-/* Banner de arriba (Configurado para la portada oficial) */
+
 .top-banner {
     width: 100%;
     max-width: 950px;
     
-    /* CONTROL DE PROPORCIÓN MÁGICA */
-    aspect-ratio: 21 / 7; /* Ajusta este número (ej. 16/5 o 21/7) según qué tan alargada dejes la foto */
     
-    /* ENLACE A TU NUEVA PORTADA */
+    aspect-ratio: 21 / 7; 
+    
+    
     background-image: url('../images/BANNER2.png'); 
     
-    /* AJUSTES DE RECTIFICACIÓN */
-    background-size: 100% 100%;     /* Obliga a la imagen a mostrarse COMPLETA dentro de la caja */
-    background-position: center;   /* Centra perfectamente el título "CONTRASTE" */
-    background-repeat: no-repeat;  /* Evita que se duplique */
+    
+    background-size: 100% 100%;     
+    background-position: center;   
+    background-repeat: no-repeat;  
     
     border-radius: 16px;
     border: 1px solid rgba(161, 38, 75, 0.5); 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* El visor principal (Donde irá la dramatización/novela) */
+
 .media-viewer {
     width: 100%;
     max-width: 950px;
@@ -256,14 +247,12 @@ body {
                 0 0 30px rgba(161, 38, 75, 0.05);
 }
 
-/* ==========================================================================
-   SECCIÓN DE LA HISTORIA (Estilos Generales para PC)
-   ========================================================================== */
+
 .story-container {
     width: 100%;
     max-width: 950px;
     margin-top: 20px;
-    margin-bottom: 40px; /* Margen para que no quede pegado al piso en PC */
+    margin-bottom: 40px; 
 }
 
 .story-card {
@@ -299,9 +288,7 @@ body {
     margin-bottom: 0; 
 }
 
-/* ==========================================================================
-   ADAPTACIÓN EXCLUSIVA PARA CELULARES
-   ========================================================================== */
+
 @media (max-width: 768px) {
     .interface-container {
         flex-direction: column;
@@ -310,11 +297,10 @@ body {
     }
 
     .sidebar-footer {
-        display: none; /* Apaga el agradecimiento del inicio en celular */
+        display: none; 
     }
-
     .footer-movil {
-        display: block; /* Enciende el agradecimiento al final en celular */
+        display: block; 
         text-align: center;
         font-size: 0.75rem;
         line-height: 1.6;
@@ -326,7 +312,7 @@ body {
     }
 
     .sidebar {
-        position: relative; /* Rompe el 'fixed' en celulares */
+        position: relative; 
         width: 100%;
         height: auto;
         margin-left: 0;
@@ -338,8 +324,7 @@ body {
     }
 
     .main-content {
-        margin-left: 0; /* Quita el espacio izquierdo en teléfonos */
-        padding: 20px;
+        margin-left: 0; 
         height: auto;
         width: 100%;
         gap: 25px;
@@ -369,9 +354,9 @@ body {
 
 .top-banner {
         width: 100%;
-        height: auto; /* Dejamos que el alto lo defina la proporción de la imagen */
-        aspect-ratio: 16 / 5; /* Forzamos la proporción horizontal en pantallas pequeñas */
-        background-size: 100% 100%; /* Mantiene la imagen 100% visible de borde a borde */
+        height: auto; 
+        aspect-ratio: 16 / 5; 
+        background-size: 100% 100%; 
         border-radius: 12px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     }
@@ -396,7 +381,7 @@ body {
         line-height: 1.7;
     }
 
-    /* Ajustes de Más Música dentro del búnker móvil */
+
     .music-card {
         padding: 15px;
         gap: 20px;
@@ -415,4 +400,4 @@ body {
     .music-info p {
         font-size: 0.8rem;
     }
-} /* <--- AQUÍ SE CIERRA LA MEDIA QUERY CORRECTAMENTE Y PROTEGE TODO LO ANTERIOR */
+} 

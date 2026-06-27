@@ -6,17 +6,17 @@
     <title>Contraste</title>
     <link rel="icon" type="image/png" href="images/nota-musical.png">
     
-    <!-- ENLACE A FONT AWESOME (Para los iconos oficiales de redes) -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Tu archivo de estilos personalizado -->
+    
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
     <div class="interface-container">
         
-        <!-- BARRA LATERAL (Izquierda) -->
+        
         <aside class="sidebar">
             <div class="menu-buttons">
                 <a href="#historia" class="btn">Historia detrás de contraste</a>
@@ -24,24 +24,24 @@
                 <a href="#musica" class="btn">Más música</a>
             </div>
             
-            <!-- SECCIÓN DE REDES SOCIALES ACTUALIZADA -->
+            
             <div class="social-links">
-                <!-- Facebook (temporalmente con el link en '#' hasta que lo tengas) -->
+                
                 <a href="https://www.facebook.com/profile.php?id=61563204593921" target="_blank" class="social-item">
                     <i class="fa-brands fa-facebook-f icon"></i> 
                 </a>
                 
-                <!-- TikTok con su enlace real -->
+                
                 <a href="https://www.tiktok.com/@marianalc_music?is_from_webapp=1&sender_device=pc" target="_blank" class="social-item">
                     <i class="fa-brands fa-tiktok icon"></i> 
                 </a>
                 
-                <!-- Instagram con su enlace real -->
+                
                 <a href="https://www.instagram.com/marianalc_music/" target="_blank" class="social-item">
                     <i class="fa-brands fa-instagram icon"></i> 
                 </a>
 
-                <!-- YouTube con su enlace real -->
+                
                 <a href="https://www.youtube.com/@marianalopezcardona" target="_blank" class="social-item">
                     <i class="fa-brands fa-youtube icon"></i> 
                 </a>
@@ -56,12 +56,11 @@
         </aside>
 
 <main class="main-content">
-    <!-- Sección de la Portada -->
+    
     <div id="historia" class="top-banner">
-        <!-- Aquí va la portada/canción -->
+    
     </div>
 
-     <!-- NUEVA SECCIÓN: Sección 1: Historia detrás de Contraste -->
     <section id="historia1" class="story-container">
         <div class="story-card">
             <h2>Historia detrás de Contraste</h2>
@@ -84,17 +83,13 @@
         
     </section>
     
-    <!-- Sección del Video -->
     <div id="novela" class="media-viewer">
     <iframe src="https://player.vimeo.com/video/1204391629?h=f97a247c01&title=0&byline=0&portrait=0" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
     </div>
 
-    <!-- ==========================================================================
-     SECCIÓN 3: MÁS MÚSICA 
-     ========================================================================== -->
+    
 <section id="musica" class="music-container">
     
-    <!-- Canción 1: Palabras vacías -->
     <a href="https://www.youtube.com/watch?v=F1cUiMtkMJw" target="_blank" class="music-card">
         <div class="music-image">
             <img src="images/palabras_vacias.jpeg" alt="Palabras vacías">
@@ -105,7 +100,6 @@
         </div>
     </a>
 
-    <!-- Canción 2: Acuarelas color marrón -->
     <a href="https://www.youtube.com/watch?v=UrA9Y0CAW-Q&list=RDUrA9Y0CAW-Q&start_radio=1" target="_blank" class="music-card">
         <div class="music-image">
             <img src="images/acuarelas_marron.png" alt="Acuarelas color marrón">
@@ -118,20 +112,13 @@
 
 </section>
 
-    <!-- Sección de la Historia (Puedes crear una caja nueva de texto abajo) -->
     <div id="historia" class="story-section">
-        <!-- Aquí escribes la historia del proyecto -->
     </div>
 </main>
 
-        <!-- CONTENIDO PRINCIPAL (Derecha)
-        <main class="main-content">
-            <div class="top-banner"></div>
-            <div class="media-viewer"></div>
-        </main> -->
+    
 
     </div>
-<!-- CONTENIDO PRINCIPAL (Derecha en PC, Abajo en Celular) -->
 <main class="main-content">
 
 
@@ -146,8 +133,6 @@
     
     <script>
         window.onload = function() {
-            // Usamos las coordenadas exactas de dibujo (SVG) de una nota simple y una doble.
-            // Esto desbloquea el color, permitiendo que la librería las pinte como queramos.
             var notaSimple = confetti.shapeFromPath({
                 path: 'M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z'
             });
@@ -161,9 +146,9 @@
                 particleCount: 120,         
                 spread: 120,               
                 origin: { y: 0.5 },        
-                shapes: [notaSimple, notaDoble], // Le pasamos los trazos en lugar del texto
-                colors: coloresDivertidos,       // Ahora sí los pintará con estos colores
-                scalar: 2,                       // Tamaño perfecto para que se note la forma
+                shapes: [notaSimple, notaDoble], 
+                colors: coloresDivertidos,       
+                scalar: 2,                       
                 ticks: 100                 
             });
         };
